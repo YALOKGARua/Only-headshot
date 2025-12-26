@@ -1,7 +1,7 @@
 {
   "name": "Only Headshots",
   "description": "Headshot-only damage filter (host-side).",
-  "author": "User",
+  "author": "YALOKGAR",
   "version": "1.0.0",
   "blt_version": 2,
   "hooks": [
