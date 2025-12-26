@@ -1,0 +1,29 @@
+{
+  "name": "Only Headshots",
+  "description": "Headshot-only damage filter (host-side).",
+  "author": "User",
+  "version": "1.0.0",
+  "blt_version": 2,
+  "hooks": [
+    {
+      "hook_id": "lib/setups/menusetup",
+      "script_path": "init.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/copdamage",
+      "script_path": "hooks/copdamage.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/copbrain",
+      "script_path": "hooks/copbrain.lua"
+    },
+    {
+      "hook_id": "lib/units/weapons/raycastweaponbase",
+      "script_path": "hooks/raycastweaponbase.lua"
+    },
+    {
+      "hook_id": "lib/setups/gamesetup",
+      "script_path": "hooks/gamesetup.lua"
+    }
+  ]
+}

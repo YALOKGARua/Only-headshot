@@ -1,0 +1,287 @@
+{
+  "menu_id": "only_headshots_options",
+  "parent_menu_id": "blt_options",
+  "title": "only_headshots_menu_title",
+  "description": "only_headshots_menu_desc",
+  "items": [
+    {
+      "type": "toggle",
+      "id": "only_headshots_enabled",
+      "title": "only_headshots_opt_enabled_title",
+      "description": "only_headshots_opt_enabled_desc",
+      "callback": "OnlyHeadshots_ToggleEnabled",
+      "value": "enabled",
+      "default_value": true,
+      "localized": true
+    },
+    {
+      "type": "multiple_choice",
+      "id": "only_headshots_apply_to",
+      "title": "only_headshots_opt_apply_to_title",
+      "description": "only_headshots_opt_apply_to_desc",
+      "callback": "OnlyHeadshots_SetApplyTo",
+      "items": [
+        "only_headshots_opt_apply_to_human",
+        "only_headshots_opt_apply_to_human_ai",
+        "only_headshots_opt_apply_to_everyone"
+      ],
+      "item_values": [
+        "human_players",
+        "human_and_ai",
+        "everyone"
+      ],
+      "localized_items": true,
+      "value": "apply_to",
+      "default_value": "human_players",
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_exclude_civilians",
+      "title": "only_headshots_opt_exclude_civilians_title",
+      "description": "only_headshots_opt_exclude_civilians_desc",
+      "callback": "OnlyHeadshots_ToggleExcludeCivilians",
+      "value": "exclude_civilians",
+      "default_value": true,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_strict_no_body",
+      "title": "only_headshots_opt_strict_no_body_title",
+      "description": "only_headshots_opt_strict_no_body_desc",
+      "callback": "OnlyHeadshots_ToggleStrictNoBody",
+      "value": "strict_no_body",
+      "default_value": false,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_allow_helmet",
+      "title": "only_headshots_opt_allow_helmet_title",
+      "description": "only_headshots_opt_allow_helmet_desc",
+      "callback": "OnlyHeadshots_ToggleAllowHelmet",
+      "value": "allow_helmet",
+      "default_value": true,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_allow_priority_head",
+      "title": "only_headshots_opt_allow_priority_head_title",
+      "description": "only_headshots_opt_allow_priority_head_desc",
+      "callback": "OnlyHeadshots_ToggleAllowPriorityHead",
+      "value": "allow_priority_head",
+      "default_value": true,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_ai_cover_head",
+      "title": "only_headshots_opt_ai_cover_head_title",
+      "description": "only_headshots_opt_ai_cover_head_desc",
+      "callback": "OnlyHeadshots_ToggleAICoverHead",
+      "value": "ai_cover_head",
+      "default_value": false,
+      "localized": true
+    },
+    {
+      "type": "slider",
+      "id": "only_headshots_ai_cover_strength",
+      "title": "only_headshots_opt_ai_cover_strength_title",
+      "description": "only_headshots_opt_ai_cover_strength_desc",
+      "callback": "OnlyHeadshots_SetAICoverStrength",
+      "value": "ai_cover_strength",
+      "default_value": 80,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "show_value": true,
+      "display_precision": 0,
+      "is_percentage": true,
+      "localized": true
+    },
+    {
+      "type": "multiple_choice",
+      "id": "only_headshots_ai_cover_panic_mode",
+      "title": "only_headshots_opt_ai_cover_panic_mode_title",
+      "description": "only_headshots_opt_ai_cover_panic_mode_desc",
+      "callback": "OnlyHeadshots_SetAICoverPanicMode",
+      "items": [
+        "only_headshots_opt_ai_cover_panic_mode_run_only",
+        "only_headshots_opt_ai_cover_panic_mode_always",
+        "only_headshots_opt_ai_cover_panic_mode_never"
+      ],
+      "item_values": [
+        "run_only",
+        "always",
+        "never"
+      ],
+      "localized_items": true,
+      "value": "ai_cover_panic_mode",
+      "default_value": "run_only",
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_show_head_sphere",
+      "title": "only_headshots_opt_show_head_sphere_title",
+      "description": "only_headshots_opt_show_head_sphere_desc",
+      "callback": "OnlyHeadshots_ToggleShowHeadSphere",
+      "value": "show_head_sphere",
+      "default_value": false,
+      "localized": true
+    },
+    {
+      "type": "multiple_choice",
+      "id": "only_headshots_head_sphere_mode",
+      "title": "only_headshots_opt_head_sphere_mode_title",
+      "description": "only_headshots_opt_head_sphere_mode_desc",
+      "callback": "OnlyHeadshots_SetHeadSphereMode",
+      "items": [
+        "only_headshots_opt_head_sphere_mode_crosshair",
+        "only_headshots_opt_head_sphere_mode_near",
+        "only_headshots_opt_head_sphere_mode_all"
+      ],
+      "item_values": [
+        "crosshair",
+        "near",
+        "all"
+      ],
+      "localized_items": true,
+      "value": "head_sphere_mode",
+      "default_value": "crosshair",
+      "localized": true
+    },
+    {
+      "type": "slider",
+      "id": "only_headshots_head_sphere_scale",
+      "title": "only_headshots_opt_head_sphere_scale_title",
+      "description": "only_headshots_opt_head_sphere_scale_desc",
+      "callback": "OnlyHeadshots_SetHeadSphereScale",
+      "value": "head_sphere_scale",
+      "default_value": 1,
+      "min": 0.25,
+      "max": 4,
+      "step": 0.25,
+      "show_value": true,
+      "display_precision": 2,
+      "localized": true
+    },
+    {
+      "type": "slider",
+      "id": "only_headshots_head_sphere_max_distance",
+      "title": "only_headshots_opt_head_sphere_max_distance_title",
+      "description": "only_headshots_opt_head_sphere_max_distance_desc",
+      "callback": "OnlyHeadshots_SetHeadSphereMaxDistance",
+      "value": "head_sphere_max_distance",
+      "default_value": 2500,
+      "min": 500,
+      "max": 20000,
+      "step": 250,
+      "show_value": true,
+      "display_precision": 0,
+      "localized": true
+    },
+    {
+      "type": "slider",
+      "id": "only_headshots_head_sphere_max_units",
+      "title": "only_headshots_opt_head_sphere_max_units_title",
+      "description": "only_headshots_opt_head_sphere_max_units_desc",
+      "callback": "OnlyHeadshots_SetHeadSphereMaxUnits",
+      "value": "head_sphere_max_units",
+      "default_value": 6,
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "show_value": true,
+      "display_precision": 0,
+      "localized": true
+    },
+    {
+      "type": "slider",
+      "id": "only_headshots_head_sphere_refresh",
+      "title": "only_headshots_opt_head_sphere_refresh_title",
+      "description": "only_headshots_opt_head_sphere_refresh_desc",
+      "callback": "OnlyHeadshots_SetHeadSphereRefresh",
+      "value": "head_sphere_refresh",
+      "default_value": 0.25,
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "show_value": true,
+      "display_precision": 2,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_head_sphere_include_civilians",
+      "title": "only_headshots_opt_head_sphere_include_civilians_title",
+      "description": "only_headshots_opt_head_sphere_include_civilians_desc",
+      "callback": "OnlyHeadshots_ToggleHeadSphereIncludeCivilians",
+      "value": "head_sphere_include_civilians",
+      "default_value": false,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_enforce_bullet",
+      "title": "only_headshots_opt_enforce_bullet_title",
+      "description": "only_headshots_opt_enforce_bullet_desc",
+      "callback": "OnlyHeadshots_ToggleBullet",
+      "value": "enforce_bullet",
+      "default_value": true,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_enforce_melee",
+      "title": "only_headshots_opt_enforce_melee_title",
+      "description": "only_headshots_opt_enforce_melee_desc",
+      "callback": "OnlyHeadshots_ToggleMelee",
+      "value": "enforce_melee",
+      "default_value": true,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_enforce_fire",
+      "title": "only_headshots_opt_enforce_fire_title",
+      "description": "only_headshots_opt_enforce_fire_desc",
+      "callback": "OnlyHeadshots_ToggleFire",
+      "value": "enforce_fire",
+      "default_value": false,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_enforce_explosion",
+      "title": "only_headshots_opt_enforce_explosion_title",
+      "description": "only_headshots_opt_enforce_explosion_desc",
+      "callback": "OnlyHeadshots_ToggleExplosion",
+      "value": "enforce_explosion",
+      "default_value": false,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_enforce_dot",
+      "title": "only_headshots_opt_enforce_dot_title",
+      "description": "only_headshots_opt_enforce_dot_desc",
+      "callback": "OnlyHeadshots_ToggleDot",
+      "value": "enforce_dot",
+      "default_value": false,
+      "localized": true
+    },
+    {
+      "type": "toggle",
+      "id": "only_headshots_enforce_simple",
+      "title": "only_headshots_opt_enforce_simple_title",
+      "description": "only_headshots_opt_enforce_simple_desc",
+      "callback": "OnlyHeadshots_ToggleSimple",
+      "value": "enforce_simple",
+      "default_value": false,
+      "localized": true
+    }
+  ]
+}
